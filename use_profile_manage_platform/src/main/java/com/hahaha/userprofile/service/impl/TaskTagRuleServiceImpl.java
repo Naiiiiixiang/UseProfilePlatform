@@ -1,6 +1,9 @@
 package com.hahaha.userprofile.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hahaha.userprofile.bean.TaskTagRule;
+import com.hahaha.userprofile.mapper.TaskTagRuleMapper;
+import com.hahaha.userprofile.service.TaskTagRuleService;
 
 /**
  * @Author: naixiang

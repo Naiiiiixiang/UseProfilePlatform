@@ -23,13 +23,13 @@ public class CodeGen {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("D:\\work4ideaBD2020\\data-platform\\src\\main\\java"); //输出文件路径
+        gc.setOutputDir("C:\\Users\\17937\\Desktop\\MyGitHub\\UseProfilePlatform\\use_profile_manage_platform\\src\\main\\java"); //输出文件路径
         gc.setFileOverride(true);
         gc.setActiveRecord(false);// 不需要ActiveRecord特性的请改为false
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(false);// XML columList
-        gc.setAuthor("zhangchen");// 作者
+        gc.setAuthor("naixiang");// 作者
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         //  gc.setControllerName("%sController");
@@ -46,8 +46,8 @@ public class CodeGen {
         dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("123123");
-        dsc.setUrl("jdbc:mysql://hdp1:3306/data_platform2021");
+        dsc.setPassword("niyaolanggeyou0203");
+        dsc.setUrl("jdbc:mysql://hadoop101:3306/use_profile_manage_platform");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -63,7 +63,7 @@ public class CodeGen {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.atguigu.userprofile");
+        pc.setParent("com.hahaha.userprofile");
         pc.setService("service");
         pc.setServiceImpl("service.impl");
         pc.setMapper("mapper");

@@ -11,7 +11,7 @@ import com.hahaha.userprofile.service.TagCommonTaskService;
 import com.hahaha.userprofile.service.TaskInfoService;
 import com.hahaha.userprofile.service.TaskProcessService;
 import com.hahaha.userprofile.service.TaskSubmitService;
-import io.netty.handler.codec.http.HttpUtil;
+import com.hahaha.userprofile.utils.HttpUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -77,20 +77,21 @@ public class TaskSubmitServiceImpl implements TaskSubmitService {
         Map<String, Map<String, String>> taskArgsMap = new HashMap<>();
         Map<String, String> sparkArgsMap = new HashMap();
         Map<String, String> sparkConfMap = new HashMap();
-        if (taskArgs != null & taskArgs.length() > 0) {
+        assert taskArgs != null;
+        if (taskArgs.length() > 0) {
             String[] taskArgsArr = taskArgs.split("\\r\\n|\\n|\\r");
             for (int i = 0; i < taskArgsArr.length; i++) {
                 String arg = taskArgsArr[i];
                 String[] argsKV = arg.split("=");
                 String argK = argsKV[0];
                 String argV = argsKV[1].trim();
-                if (argK.indexOf("master") >= 0 || argK.indexOf("deploy") >= 0) {
+                if (argK.contains("master") || argK.contains("deploy")) {
                     continue;
                 }
-                if (argK.indexOf("--spark.") >= 0) {
+                if (argK.contains("--spark.")) {
                     argK = argK.replace("--", "").trim();
                     sparkConfMap.put(argK, argV);
-                } else if (argK.indexOf("--conf ") >= 0) {
+                } else if (argK.contains("--conf ")) {
                     argK = argK.replace("--conf", "").trim();
                     sparkConfMap.put(argK, argV);
                 } else {

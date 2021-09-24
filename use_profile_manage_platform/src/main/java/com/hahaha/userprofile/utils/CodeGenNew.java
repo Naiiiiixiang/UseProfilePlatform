@@ -23,7 +23,7 @@ public class CodeGenNew {
         GlobalConfig gc = new GlobalConfig();
 
         //得到当前项目的路径
-        String oPath = System.getProperty("D:\\work4ideaBD2020\\data-platform");
+        String oPath = System.getProperty("C:\\Users\\17937\\Desktop\\MyGitHub\\UseProfilePlatform\\use_profile_manage_platform");
 
         //生成文件输出根目录
         gc.setOutputDir(oPath + "/src/main/java");
@@ -47,7 +47,7 @@ public class CodeGenNew {
         gc.setBaseColumnList(false);
 
         // 作者
-        gc.setAuthor("zhangchen");
+        gc.setAuthor("naixiang");
         gc.setSwagger2(true);
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
@@ -71,10 +71,10 @@ public class CodeGenNew {
         dsc.setUsername("root");
 
         //密码
-        dsc.setPassword("123123");
+        dsc.setPassword("niyaolanggeyou0203");
 
         //指定数据库
-        dsc.setUrl("jdbc:mysql://hdp1:3306/data_platform2021");
+        dsc.setUrl("jdbc:mysql://hadoop101:3306/use_profile_manage_platform");
         autoGenerator.setDataSource(dsc);
 
         // 策略配置

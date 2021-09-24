@@ -1,11 +1,13 @@
 package com.hahaha.userprofile.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hahaha.userprofile.bean.FileInfo;
 import com.hahaha.userprofile.bean.TagInfo;
 import com.hahaha.userprofile.bean.TaskInfo;
 import com.hahaha.userprofile.bean.TaskTagRule;
 import com.hahaha.userprofile.constants.ConstCodes;
+import com.hahaha.userprofile.mapper.TaskInfoMapper;
 import com.hahaha.userprofile.service.FileInfoService;
 import com.hahaha.userprofile.service.TagInfoService;
 import com.hahaha.userprofile.service.TaskInfoService;

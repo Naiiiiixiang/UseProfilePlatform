@@ -49,10 +49,7 @@ public class HttpUtil {
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("发送失败...检查网络地址...");
-
         }
-
-
     }
 
 
@@ -61,7 +58,7 @@ public class HttpUtil {
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json);
         Request request = new Request.Builder()
                 .url(url)
-                .post(requestBody) //post请求
+                .post(requestBody)  //post请求
                 .build();
         Call call = HttpUtil.getInstance().newCall(request);
         Response response = null;
@@ -73,8 +70,6 @@ public class HttpUtil {
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException("发送失败...检查网络地址...");
-
         }
-
     }
 }
