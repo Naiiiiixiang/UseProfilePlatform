@@ -1,0 +1,12 @@
+package com.hahaha.userprofile.service;
+
+import com.hahaha.userprofile.bean.TaskProcess;
+
+/**
+ * @Author: naixiang
+ * @Date: 2021/9/24 16:23
+ * @Description: 服务类
+ **/
+public interface TaskSubmitService {
+    void submitTask(TaskProcess taskProcess, boolean isRetry);
+}
