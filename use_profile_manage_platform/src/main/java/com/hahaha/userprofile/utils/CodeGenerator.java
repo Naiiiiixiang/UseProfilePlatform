@@ -57,9 +57,9 @@ public class CodeGenerator {
         dsc.setDbType(DbType.MYSQL);
         dsc.setUrl("jdbc:mysql://hadoop101:3306/use_profile_manage_platform");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("Flzx3qc!");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置

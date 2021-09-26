@@ -6,13 +6,15 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.4</version>
+        <version>2.5.4</version>
         <relativePath/>
     </parent>
 
     <groupId>com.hahaha</groupId>
     <artifactId>use_profile_manage_platform</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>use_profile_manage_platform</name>
+    <description>use_profile_manage_platform</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -63,7 +65,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3.3</version>
+            <version>3.4.1</version>
         </dependency>
 
         <dependency>
@@ -124,11 +126,10 @@
 
 
 
-
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.0</version>
+            <version>3.4.1</version>
         </dependency>
 
         <dependency>
@@ -169,13 +170,14 @@
         </dependency>
     </dependencies>
 
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.4</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

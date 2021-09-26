@@ -65,13 +65,13 @@ public class CodeGenNew {
         //设置数据库类型
         dsc.setDbType(DbType.MYSQL);
 
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
 
         //用户名
         dsc.setUsername("root");
 
         //密码
-        dsc.setPassword("niyaolanggeyou0203");
+        dsc.setPassword("123456");
 
         //指定数据库
         dsc.setUrl("jdbc:mysql://hadoop101:3306/use_profile_manage_platform");

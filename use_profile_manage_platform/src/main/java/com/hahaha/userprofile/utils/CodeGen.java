@@ -23,16 +23,16 @@ public class CodeGen {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("C:\\Users\\17937\\Desktop\\MyGitHub\\UseProfilePlatform\\use_profile_manage_platform\\src\\main\\java"); //输出文件路径
+        gc.setOutputDir("C:\\Users\\17937\\Desktop\\MyGitHub\\UseProfilePlatform\\use_profile_manage_platform\\src\\main\\java");   //输出文件路径
         gc.setFileOverride(true);
-        gc.setActiveRecord(false);// 不需要ActiveRecord特性的请改为false
-        gc.setEnableCache(false);// XML 二级缓存
-        gc.setBaseResultMap(true);// XML ResultMap
-        gc.setBaseColumnList(false);// XML columList
-        gc.setAuthor("naixiang");// 作者
+        gc.setActiveRecord(false);    // 不需要ActiveRecord特性的请改为false
+        gc.setEnableCache(false);    // XML 二级缓存
+        gc.setBaseResultMap(true);    // XML ResultMap
+        gc.setBaseColumnList(false);    // XML columList
+        gc.setAuthor("naixiang");    // 作者
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
-        //  gc.setControllerName("%sController");
+//        gc.setControllerName("%sController");
         gc.setServiceName("%sService");
         gc.setServiceImplName("%sServiceImpl");
         gc.setMapperName("%sMapper");
@@ -44,9 +44,9 @@ public class CodeGen {
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setDbType(DbType.MYSQL);
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("niyaolanggeyou0203");
+        dsc.setPassword("123456");
         dsc.setUrl("jdbc:mysql://hadoop101:3306/use_profile_manage_platform");
         mpg.setDataSource(dsc);
 
@@ -68,7 +68,7 @@ public class CodeGen {
         pc.setServiceImpl("service.impl");
         pc.setMapper("mapper");
         pc.setEntity("bean");
-        //pc.setXml("xml");
+//        pc.setXml("xml");
         mpg.setPackageInfo(pc);
 
         // 执行生成
