@@ -87,7 +87,7 @@ public class TaskInfoController {
         return "success";
     }
 
-    public static final String PATH_JAR = "/user_profile/task_customer/jar/";
+    public static final String PATH_JAR = "/user_profile_manage/task_customer/jar/";
 
     @PostMapping("/upload")
     @CrossOrigin

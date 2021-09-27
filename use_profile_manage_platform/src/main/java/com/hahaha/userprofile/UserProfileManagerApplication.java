@@ -12,7 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @Date: 2021/9/24 18:48
  * @Description:
  **/
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+@SpringBootApplication
 @EnableScheduling
 @MapperScan("com.hahaha.userprofile.mapper")
 public class UserProfileManagerApplication {
