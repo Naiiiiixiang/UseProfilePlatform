@@ -12,7 +12,6 @@ import java.util.Map;
  * @Date: 2021/9/24 16:07
  * @Description: 服务类
  **/
-@Service
 public interface TagInfoService extends IService<TagInfo> {
     List<TagInfo> getTagInfoAllWithStatus();
 

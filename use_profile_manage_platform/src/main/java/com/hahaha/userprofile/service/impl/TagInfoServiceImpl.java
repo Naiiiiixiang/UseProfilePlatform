@@ -1,10 +1,12 @@
 package com.hahaha.userprofile.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hahaha.userprofile.bean.TagInfo;
 import com.hahaha.userprofile.mapper.TagInfoMapper;
 import com.hahaha.userprofile.service.TagInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,8 +15,10 @@ import java.util.Map;
 /**
  * @Author: naixiang
  * @Date: 2021/9/24 16:30
- * @Description:
+ * @Description: 服务实现类
  **/
+@Service
+@DS("mysql")
 public class TagInfoServiceImpl extends ServiceImpl<TagInfoMapper, TagInfo> implements TagInfoService {
     @Autowired
     TagInfoMapper tagInfoMapper;

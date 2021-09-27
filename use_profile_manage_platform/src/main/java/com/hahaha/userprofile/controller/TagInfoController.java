@@ -37,7 +37,7 @@ public class TagInfoController {
         return JSON.toJSONString(tagInfo);
     }
 
-    @PostMapping("taginfo")
+    @PostMapping("/taginfo")
     @CrossOrigin
     public void saveTagInfo(@RequestBody TagInfo tagInfo) {
         if (tagInfo.getId() == null) {
@@ -46,7 +46,7 @@ public class TagInfoController {
         tagInfoService.saveOrUpdate(tagInfo);
     }
 
-    @RequestMapping("taglist")
+    @RequestMapping("/taglist")
     @CrossOrigin
     public String tagInfoList() {
 
@@ -76,7 +76,7 @@ public class TagInfoController {
     }
 
 
-    @RequestMapping("subtags/{parentTagId}")
+    @RequestMapping("/subtags/{parentTagId}")
     @CrossOrigin
     public String tagInfoList(@PathVariable("parentTagId") String parentTagId) {
 

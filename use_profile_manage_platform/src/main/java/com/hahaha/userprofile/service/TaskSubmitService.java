@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
  * @Date: 2021/9/24 16:23
  * @Description: 服务类
  **/
-@Service
 public interface TaskSubmitService {
     void submitTask(TaskProcess taskProcess, boolean isRetry);
 }

@@ -46,7 +46,7 @@ public class CodeGen {
         dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("123456");
+        dsc.setPassword("niyaolanggeyou0203");
         dsc.setUrl("jdbc:mysql://hadoop101:3306/use_profile_manage_platform");
         mpg.setDataSource(dsc);
 

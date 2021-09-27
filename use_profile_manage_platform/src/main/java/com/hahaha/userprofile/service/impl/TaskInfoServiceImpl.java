@@ -1,5 +1,6 @@
 package com.hahaha.userprofile.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hahaha.userprofile.bean.FileInfo;
@@ -13,6 +14,7 @@ import com.hahaha.userprofile.service.TagInfoService;
 import com.hahaha.userprofile.service.TaskInfoService;
 import com.hahaha.userprofile.service.TaskTagRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -22,6 +24,8 @@ import java.util.List;
  * @Date: 2021/9/24 16:31
  * @Description:
  **/
+@Service
+@DS("mysql")
 public class TaskInfoServiceImpl extends ServiceImpl<TaskInfoMapper, TaskInfo> implements TaskInfoService {
     @Autowired
     TaskTagRuleService taskTagRuleService;

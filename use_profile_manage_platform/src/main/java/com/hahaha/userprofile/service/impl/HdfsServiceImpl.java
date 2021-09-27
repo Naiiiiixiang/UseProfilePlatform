@@ -1,5 +1,6 @@
 package com.hahaha.userprofile.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.hahaha.userprofile.bean.FileInfo;
 import com.hahaha.userprofile.service.FileInfoService;
 import com.hahaha.userprofile.service.HdfsService;
@@ -10,6 +11,7 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.net.URI;
@@ -19,8 +21,10 @@ import java.util.UUID;
 /**
  * @Author: naixiang
  * @Date: 2021/9/24 15:42
- * @Description:
+ * @Description: 服务实现类
  **/
+@Service
+@DS("mysql")
 public class HdfsServiceImpl implements HdfsService {
     @Value("${hdfs.url}")
     private String hdfsUrl;

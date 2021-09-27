@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 /**
  * @Author: naixiang
  * @Date: 2021/9/24 15:21
- * @Description:
+ * @Description: 服务实现类
  **/
 @Service
 @DS("mysql")

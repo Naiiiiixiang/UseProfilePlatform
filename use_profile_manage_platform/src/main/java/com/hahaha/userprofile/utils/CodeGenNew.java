@@ -71,7 +71,7 @@ public class CodeGenNew {
         dsc.setUsername("root");
 
         //密码
-        dsc.setPassword("123456");
+        dsc.setPassword("niyaolanggeyou0203");
 
         //指定数据库
         dsc.setUrl("jdbc:mysql://hadoop101:3306/use_profile_manage_platform");

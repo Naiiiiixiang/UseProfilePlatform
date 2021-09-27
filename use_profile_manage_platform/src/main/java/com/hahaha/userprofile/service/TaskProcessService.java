@@ -11,7 +11,6 @@ import java.util.List;
  * @Date: 2021/9/24 16:23
  * @Description: 服务类
  **/
-@Service
 public interface TaskProcessService extends IService<TaskProcess> {
     void updateStatus(Long taskProcessId, String status);
 

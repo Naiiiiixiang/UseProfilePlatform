@@ -1,5 +1,6 @@
 package com.hahaha.userprofile.service.impl;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hahaha.userprofile.bean.TaskInfo;
@@ -9,6 +10,7 @@ import com.hahaha.userprofile.mapper.TaskProcessMapper;
 import com.hahaha.userprofile.service.TaskInfoService;
 import com.hahaha.userprofile.service.TaskProcessService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
@@ -21,8 +23,10 @@ import static com.hahaha.userprofile.constants.ConstCodes.TASK_EXEC_STATUS_TODO;
 /**
  * @Author: naixiang
  * @Date: 2021/9/24 16:32
- * @Description:
+ * @Description: 服务实现类
  **/
+@Service
+@DS("mysql")
 public class TaskProcessServiceImpl extends ServiceImpl<TaskProcessMapper, TaskProcess> implements TaskProcessService {
     @Autowired
     TaskInfoService taskInfoService;

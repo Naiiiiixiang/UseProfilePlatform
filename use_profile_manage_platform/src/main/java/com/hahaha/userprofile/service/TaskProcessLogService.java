@@ -9,6 +9,5 @@ import org.springframework.stereotype.Service;
  * @Date: 2021/9/24 16:21
  * @Description: 服务类
  **/
-@Service
 public interface TaskProcessLogService extends IService<TaskProcessLog> {
 }

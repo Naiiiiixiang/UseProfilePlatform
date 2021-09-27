@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
  * @Date: 2021/9/24 16:06
  * @Description: 服务类
  **/
-@Service
 public interface TagCommonTaskService extends IService<TagCommonTask> {
     TagCommonTask getTagCommonTaskWithJarFile(Long id);
 }

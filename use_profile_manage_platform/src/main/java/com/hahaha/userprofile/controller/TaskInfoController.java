@@ -71,7 +71,7 @@ public class TaskInfoController {
         return "success";
     }
 
-    @GetMapping("taskinfo/{id}")
+    @GetMapping("/taskinfo/{id}")
     @CrossOrigin
     public String getTaskInfo(@PathVariable("id") Long taskId) {
         TaskInfo taskInfo = taskInfoService.getTaskInfoWithTag(taskId);
@@ -80,7 +80,7 @@ public class TaskInfoController {
     }
 
 
-    @DeleteMapping("taskinfo/{id}")
+    @DeleteMapping("/taskinfo/{id}")
     @CrossOrigin
     public String delTaskInfo(@PathVariable("id") Long taskId) {
         taskInfoService.removeById(taskId);

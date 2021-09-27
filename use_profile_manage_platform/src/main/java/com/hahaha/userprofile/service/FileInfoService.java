@@ -9,6 +9,5 @@ import org.springframework.stereotype.Service;
  * @Date: 2021/9/24 15:44
  * @Description: 服务类
  **/
-@Service
 public interface FileInfoService extends IService<FileInfo> {
 }
