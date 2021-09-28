@@ -37,7 +37,7 @@ public class TagInfoController {
         return JSON.toJSONString(tagInfo);
     }
 
-    @PostMapping("/taginfo")
+    @PostMapping("taginfo")
     @CrossOrigin
     public void saveTagInfo(@RequestBody TagInfo tagInfo) {
         if (tagInfo.getId() == null) {
@@ -46,12 +46,12 @@ public class TagInfoController {
         tagInfoService.saveOrUpdate(tagInfo);
     }
 
-    @RequestMapping("/taglist")
+    @RequestMapping("taglist")
     @CrossOrigin
     public String tagInfoList() {
 
         List<TagInfo> tagInfoList = tagInfoService.getTagInfoAllWithStatus();
-        List<TagTreeNode> tagTreeNodeList = tagInfoList.stream().map(tagInfo -> new TagTreeNode(tagInfo)).collect(Collectors.toList());
+        List<TagTreeNode> tagTreeNodeList = tagInfoList.stream().map(TagTreeNode::new).collect(Collectors.toList());
 
         Map<String, TagTreeNode> tagTreeNodeMap = new HashMap();
         List<TagTreeNode> headTreeNodeList = new ArrayList<>();
@@ -76,7 +76,7 @@ public class TagInfoController {
     }
 
 
-    @RequestMapping("/subtags/{parentTagId}")
+    @RequestMapping("subtags/{parentTagId}")
     @CrossOrigin
     public String tagInfoList(@PathVariable("parentTagId") String parentTagId) {
 
@@ -92,7 +92,7 @@ public class TagInfoController {
     @CrossOrigin
     public String tagsCascader(@PathVariable("level") Long level) {
         List<TagInfo> tagInfoList = tagInfoService.list(new QueryWrapper<TagInfo>().le("tag_level", level).orderByAsc("tag_level"));
-        List<TagOption> tagOptionList = tagInfoList.stream().map(tagInfo -> new TagOption(tagInfo)).collect(Collectors.toList());
+        List<TagOption> tagOptionList = tagInfoList.stream().map(TagOption::new).collect(Collectors.toList());
 
         Map<Long, TagOption> tagOptionMap = new HashMap();
         List<TagOption> headTagOptionList = new ArrayList<>();
